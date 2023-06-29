@@ -6,4 +6,3 @@ def solution(participant, completion):
             return participant[i]
     else:
         return participant[-1] #completion의 개수 만큼 돌았으니까 하나 남은건 당연히 이거임
-
