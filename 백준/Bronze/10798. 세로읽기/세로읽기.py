@@ -1,13 +1,17 @@
-word_array = [['*' for j in range(15)]for i in range(5)]
+arr = []
+arr_size = []
 
-for i in range(5):
-    word_list = input()
 
-    for idx, word in enumerate(word_list):
-        word_array[i][idx] = word
+for _ in range(5):
+    j = input()
+    arr.append(j)
+    arr_size.append(len(j))
 
-for j in range(15):
-    for i in range(5):
-        if word_array[i][j] == '*':
-            continue
-        print(word_array[i][j], end = "")
+result=""
+
+for i in range(max(arr_size)):
+    for j in range(5):
+        if i <arr_size[j]:
+            result+=arr[j][i]
+
+print(result)
