@@ -1,13 +1,12 @@
-n, m = map(int, input().split())
 
-while (True):
-  if (n == 0 & m == 0):
+while True:
+  a,b= map(int,input().split())
+  if (a==0&b==0):
     break
   else:
-    if (n % m == 0):
+    if(a%b==0):
       print("multiple")
-    elif (m % n == 0):
+    elif b%a==0:
       print("factor")
     else:
       print("neither")
-    n, m = map(int, input().split())
