@@ -1,4 +1,4 @@
-# 1일 알고리즘
+# 1일 1알고리즘
 This is a auto push repository for Baekjoon Online Judge created with [BaekjoonHub](https://github.com/BaekjoonHub/BaekjoonHub).
 
 
@@ -7,9 +7,9 @@ This is a auto push repository for Baekjoon Online Judge created with [BaekjoonH
 |  날짜  | 문제 유형 |                     푼 문제                      | 
 |:----:|:----------------------------------------------:|:--------:|
 | 2/17 | 정렬 | [11650](https://www.acmicpc.net/problem/11650) | 
-| 2/18 |                                                |          |
+| 2/18 |   |      
 | 2/19 |                                                |          |
-| 2/20 |                                                |          |
+| 2/20 |  counter | [10816](https://www.acmicpc.net/problem/10816)    |
 | 2/21 |                                                |          |
 | 2/22 |                                                |          |
 | 2/23 |                                                |          |
