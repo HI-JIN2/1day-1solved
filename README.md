@@ -28,8 +28,8 @@ This is a auto push repository for Baekjoon Online Judge created with [BaekjoonH
 | 11/24 |    32154    |   구현            |
 | 11/25 |    27959    | 구현           |
 | 11/26 |     28235    |     구현         |
-| 11/27 |        |               |
-| 11/28 |        |               |
+| 11/27 |    5338    |       구현          |
+| 11/28 |   8370      |        구현         |
 | 11/29 |        |               |
 | 11/30 |        |               |
 
