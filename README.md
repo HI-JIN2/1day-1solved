@@ -39,8 +39,8 @@ This is a auto push repository for Baekjoon Online Judge created with [BaekjoonH
 | :--:  | :----: | :-----------: |
 | 12/1  |        |               |
 | 12/2  |        |               |
-| 12/3  |        |               |
-| 12/4  |        |               |
+| 12/3  |   13277      |구현               |
+| 12/4  |   16394      |   구현            |
 | 12/5  |        |               |
 | 12/6  |        |               |
 | 12/7  |        |               |
