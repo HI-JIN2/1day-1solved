@@ -51,7 +51,7 @@ This is a auto push repository for Baekjoon Online Judge created with [BaekjoonH
 | 12/12 |     15963   |       구현        |
 | 12/13 |     5014    |           bfs    |
 | 12/14 |    15000    |   string            |
-| 12/15 |        |               |
+| 12/15 |     1193    |   구현            |
 | 12/16 |        |               |
 | 12/17 |        |               |
 | 12/18 |        |               |
