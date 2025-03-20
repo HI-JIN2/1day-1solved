@@ -1,15 +1,12 @@
 n=int(input())
-score = list(map(int,input().split()))
-n_score =list()
+score =list(map(int,input().split()))
 
-t=max(score)
+top=max(score)
 
-for i in score:
-    n_score.append(i/t*100)
 
 sum=0
+for i in score:
+    sum+=i
 
-for i in n_score:
-    sum +=i
 
-print(sum/n)
+print(sum/top*100/n)
