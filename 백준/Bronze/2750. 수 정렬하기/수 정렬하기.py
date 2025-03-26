@@ -1,7 +1,10 @@
-n =int(input())
-m=[]
-for i in range(n):
-    m.append(int(input()))
-m=sorted(m)
-for i in range(len(m)):
-    print(m[i])
+N=int(input())
+l=list()
+for i in range(1,N+1):
+    a=int(input())
+    l.append(a)
+
+l.sort()
+
+for i in l:
+    print(i,sep="\n")
