@@ -3,12 +3,9 @@ def solution(n, w, num):
     
     if w==1:
         return n-num+1
-   
-    # height = n//w
-    # f = num // w  #몇층인지
-    # print(height,f)
-    # if n%w==0:
-    #     return height - f +1
+    
+    # elif n%w==0:
+    #     return n/w
     
     height = n//w
     if(n%w!=0):
@@ -21,9 +18,6 @@ def solution(n, w, num):
         f+=1
     print("f는 ",f) #num이 2층에 있다는걸 알았음
     
-    
-    if n%w==0:
-        return height - f +1
     #그층이 몇갠지 
     #몇번째 위치인지
     my = num%w 
@@ -63,12 +57,12 @@ def solution(n, w, num):
     #방향이 같으면 
     if (a==0 and b==0 ) or (a==1 and b==1):
         print(a,b)
-        if top - my>=0:
+        if top - my>0:
             answer +=1  
     #방향이 다르면 
     else: 
         print(a,b)
-        if top-(w-my)>=0:
+        if n-top-my>0:
             answer +=1
 
 
