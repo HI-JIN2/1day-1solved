@@ -17,3 +17,17 @@ This is a auto push repository for Baekjoon Online Judge created with [BaekjoonH
   ```
 
 - dequq 스택과 큐의 기능을 한 번에
+
+
+
+- 0426 
+  - dfs/bfs
+    - dfs와 bfs
+    - 바이러스 
+  - 그리디
+    -  숫자게임
+    -  전자레인지
+    -  거스름돈
+    -  캠핑 **
+  - 구현
+    - 택배상자 꺼내기
