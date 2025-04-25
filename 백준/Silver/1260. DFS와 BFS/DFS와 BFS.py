@@ -1,36 +1,60 @@
 from collections import deque
-import sys
-read = sys.stdin.readline
+def dfs(graph,v):
+    visited =[]
 
-def bfs(v):
-  q = deque()
-  q.append(v)       
-  visit_list[v] = 1   
-  while q:
-    v = q.popleft()
-    print(v, end = " ")
-    for i in range(1, n + 1):
-      if visit_list[i] == 0 and graph[v][i] == 1:
-        q.append(i)
-        visit_list[i] = 1
+    need_visited = deque()
 
-def dfs(v):
-  visit_list2[v] = 1        
-  print(v, end = " ")
-  for i in range(1, n + 1):
-    if visit_list2[i] == 0 and graph[v][i] == 1:
-      dfs(i)
+    need_visited.append(v) #루트 부터 시작 
 
-n, m, v = map(int, read().split())
+    while need_visited:
+        node = need_visited.pop()
 
-graph = [[0] * (n + 1) for _ in range(n + 1)] 
-visit_list = [0] * (n + 1)
-visit_list2 = [0] * (n + 1)
+        if node not in visited:
+            visited.append(node)
+            need_visited.extend(graph.get(node,[]))
+    return visited
 
-for _ in range(m):
-  a, b = map(int, read().split())
-  graph[a][b] = graph[b][a] = 1
+def bfs(graph,v):
+    need_visited, visited =[],[]
+    need_visited.append(v)
 
-dfs(v)
+    while need_visited:
+        node = need_visited[0]
+        del need_visited[0]
+
+        if node not in visited:
+            visited.append(node)
+            need_visited.extend(graph.get(node,[]))
+
+    return visited
+
+
+
+
+n,m,v = map(int,input().split())
+graph = dict()
+for i in range(m):
+    key, value = map(int,input().split())
+    if key not in graph:
+        graph[key]=list()
+    if value not in graph:
+        graph[value]= list()
+    graph[key].append(value)
+    graph[value].append(key) #양방향 연결 
+
+# print(graph)
+
+
+# 이걸 왜해야하지?
+for key in graph:
+    graph[key].sort(reverse=True)
+# print(graph)
+
+for i in dfs(graph,v):
+    print(i,end=" ")
 print()
-bfs(v)
+
+for key in graph:
+    graph[key].sort(reverse=False)
+for i in bfs(graph,v):
+    print(i,end=" ")
