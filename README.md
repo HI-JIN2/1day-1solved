@@ -20,11 +20,11 @@ This is a auto push repository for Baekjoon Online Judge created with [BaekjoonH
 
 
 
-- 0426 
-  - dfs/bfs
+####   0426 
+  - dfs/bfs 개념 
     - dfs와 bfs
     - 바이러스 
-  - 그리디
+  - 그리디 개념 
     -  숫자게임
     -  전자레인지
     -  거스름돈
