@@ -2,7 +2,7 @@
 This is a auto push repository for Baekjoon Online Judge created with [BaekjoonHub](https://github.com/BaekjoonHub/BaekjoonHub).
 
 
-### 파이썬 오답노트
+## 파이썬 오답노트
 
 - list(map(int,input().split())
 
@@ -18,6 +18,8 @@ This is a auto push repository for Baekjoon Online Judge created with [BaekjoonH
 
 - dequq 스택과 큐의 기능을 한 번에
 
+## SQL
+- `DATE_FORMAT(PUBLISHED_DATE,'%Y-%m-%d') as PUBLISHED_DATE`
 
 
 ####   0426 
