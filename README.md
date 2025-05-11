@@ -17,6 +17,24 @@ This is a auto push repository for Baekjoon Online Judge created with [BaekjoonH
   ```
 
 - dequq 스택과 큐의 기능을 한 번에
+- 로또 파싱하기 
+  - `replace("(","").replace(")","")` 가 핵심
+  ```python
+  data = [
+      "1 2 3 4 5 (6)",
+      "1 3 4 2 5 (7)"
+  ]
+  
+  lotto_numbers = []
+  for line in data:
+      # 괄호 제거 후 분할
+      parts = line.replace("(", "").replace(")", "").split()
+      numbers = list(map(int, parts[:5]))
+      bonus = int(parts[5])
+      lotto_numbers.append((numbers, bonus))
+  
+  print(lotto_numbers)
+  ```
 
 ## SQL
 - `DATE_FORMAT(PUBLISHED_DATE,'%Y-%m-%d') as PUBLISHED_DATE`
