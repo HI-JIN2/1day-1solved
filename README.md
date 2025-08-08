@@ -6,7 +6,7 @@ This is a auto push repository for Baekjoon Online Judge created with [BaekjoonH
 
 - list(map(int,input().split())
 
-- set(list(a)
+- set(list(a))
 
 - for i, j in zip(survey, choices):
 
@@ -35,6 +35,16 @@ This is a auto push repository for Baekjoon Online Judge created with [BaekjoonH
   
   print(lotto_numbers)
   ```
+
+- str() int() 타입 변환 확실하게
+- 딕셔너리
+   ``` python
+   d = dict()
+   d[a] = c
+
+   sorted_dict = sorted(n.items(), key= lambda item:item[1], reverse=True) //딕셔너리 값으로 정렬
+   ```
+   
 
 ## SQL
 - `DATE_FORMAT(PUBLISHED_DATE,'%Y-%m-%d') as PUBLISHED_DATE`
