@@ -44,7 +44,15 @@ This is a auto push repository for Baekjoon Online Judge created with [BaekjoonH
 
    sorted_dict = sorted(n.items(), key= lambda item:item[1], reverse=True) //딕셔너리 값으로 정렬
    ```
-   
+- 피보나치 수열
+  ```python
+  def solution(n):
+    dp=[0,1] + [0]*n
+
+    
+    for i in range(2,n+1):
+        dp[i] = dp[i-1]+dp[i-2]
+  ```
 
 ## SQL
 - `DATE_FORMAT(PUBLISHED_DATE,'%Y-%m-%d') as PUBLISHED_DATE`
