@@ -1,7 +1,7 @@
 def solution(arr):
     new = []
     for i in range(len(arr)):
-        for j in range(i+1,len(arr)):
+        for j in range(len(arr)):
             if i == j :
                 continue
             else:
