@@ -2,18 +2,38 @@
 This is a auto push repository for Baekjoon Online Judge created with [BaekjoonHub](https://github.com/BaekjoonHub/BaekjoonHub).
 
 
-### 파이썬 오답노트
-
-- list(map(int,input().split())
-
-- set(list(a)
-
-- for i, j in zip(survey, choices):
-
+## 파이썬 
 - 입력 빠르게 받기
   ```python
   import sys
   input = sys.stdin.readline()
+  ```
+- sort
+- ![img_1.png](https://wikidocs.net/images/page/232020/03-1-12.png)
+
+  - l.sort()는 원본 자체를 정렬
+  - l2 = l.sorted()는 원본 그대로 두고 정렬
+  - 버블정렬은 N^2 / sort는 nlogn
+  - set은 n
+
+- `enumerate()`
+  - 리스트 안에 있는걸 인덱스랑 같이 반환할 수 있음 
+  - `for i, num in enumerate(nums):`
+- for i, j in zip(survey, choices):
+  - 두 리스트를 한번에 돌림
+
+- list(map(int,input().split())
+
+- set(list(a))
+
+
+
+- 배열에 있는 값이 큰순서대로 인덱스 출력하기
+  ```python
+  sorted_indexed_list = sorted(enumerate(per), key=lambda x: x[1], reverse=True)
+
+  # 정렬된 결과에서 인덱스만 추출
+  sorted_indices = [index + 1 for index, value in sorted_indexed_list]
   ```
 
 - dequq 스택과 큐의 기능을 한 번에
