@@ -1,8 +1,18 @@
 # 1일 1알고리즘
 This is a auto push repository for Baekjoon Online Judge created with [BaekjoonHub](https://github.com/BaekjoonHub/BaekjoonHub).
 
+# 문제 풀이
+|날짜|문제|
+|:--:|:--:|
+|25/9/19 금 | 두 개 뽑아서 더하기L1, 모의고사L1|
+|25/9/20 토 | 행렬의 곱셈L2, 실패율L1, 방문길이L2|
+|25/9/21 일 | |
 
-## 파이썬 
+# 오답노트
+
+<details>
+<summary> 파이썬 </summary>
+  
 - 입력 빠르게 받기
   ```python
   import sys
@@ -74,5 +84,10 @@ This is a auto push repository for Baekjoon Online Judge created with [BaekjoonH
         dp[i] = dp[i-1]+dp[i-2]
   ```
 - sep="", end=""
-## SQL
+</details>
+
+<details>
+<summary> SQL </summary>
+  
 - `DATE_FORMAT(PUBLISHED_DATE,'%Y-%m-%d') as PUBLISHED_DATE`
+</details>
