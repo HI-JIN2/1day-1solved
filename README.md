@@ -1,12 +1,7 @@
 # 1일 1알고리즘
 This is a auto push repository for Baekjoon Online Judge created with [BaekjoonHub](https://github.com/BaekjoonHub/BaekjoonHub).
 
-# 문제 풀이
-|날짜|문제|
-|:--:|:--:|
-|25/9/19 금 | 두 개 뽑아서 더하기L1, 모의고사L1|
-|25/9/20 토 | 행렬의 곱셈L2, 실패율L1, 방문길이L2|
-|25/9/21 일 | |
+# [문제 풀이 일지](https://hi-jin-1514.notion.site/2769b2ff4b1180018635f8c86d32c52d?v=2769b2ff4b1180e28d0c000cf0ed9e6b&source=copy_link)
 
 # 오답노트
 
