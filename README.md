@@ -35,7 +35,8 @@ This is a auto push repository for Baekjoon Online Judge created with [BaekjoonH
   s = '10 20 Z 30'
   s = s.split() # s = ['10', '20', 'Z', '30']
   ```
-- popleft()
+- popleft() = pop(0)
+- ![img.png](https://velog.velcdn.com/images/snghyun331/post/ea7102a9-a733-4077-a695-89e8daa194e3/image.png)
   ```python
   from collections import deque
   a = deque()
