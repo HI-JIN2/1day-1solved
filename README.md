@@ -30,9 +30,22 @@ This is a auto push repository for Baekjoon Online Judge created with [BaekjoonH
 - list(map(int,input().split())
 
 - set(list(a))
+- s.split() 
+  ```python 
+  s = '10 20 Z 30'
+  s = s.split() # s = ['10', '20', 'Z', '30']
+  ```
+- popleft()
+  ```python
+  a = deque()
+  [a.append(i) for i in range(5)]
+  a.pop() #deque([0, 1, 2, 3])
 
-
-
+  
+  b = deque()
+  [b.append(i) for i in range(5)]
+  b.popleft() #deque([1, 2, 3, 4])
+  ```
 - 배열에 있는 값이 큰순서대로 인덱스 출력하기
   ```python
   sorted_indexed_list = sorted(enumerate(per), key=lambda x: x[1], reverse=True)
@@ -41,7 +54,7 @@ This is a auto push repository for Baekjoon Online Judge created with [BaekjoonH
   sorted_indices = [index + 1 for index, value in sorted_indexed_list]
   ```
 
-- dequq 스택과 큐의 기능을 한 번에
+- dequeue 스택과 큐의 기능을 한 번에
 - 로또 파싱하기 
   - `replace("(","").replace(")","")` 가 핵심
   ```python
