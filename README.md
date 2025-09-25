@@ -37,6 +37,7 @@ This is a auto push repository for Baekjoon Online Judge created with [BaekjoonH
   ```
 - popleft()
   ```python
+  from collections import deque
   a = deque()
   [a.append(i) for i in range(5)]
   a.pop() #deque([0, 1, 2, 3])
