@@ -1,4 +1,5 @@
-# 두 개의 수로 특정값 만들기
+# 리스트에 있는 두 개의 수로 특정값 만들기
+
 def solution(arr,target):
     hash = [0]  *(target+1)
     for i in arr:
