@@ -144,6 +144,16 @@ This is a auto push repository for Baekjoon Online Judge created with [BaekjoonH
   
   bfs(1)
   ```
+  
+- 시뮬레이션
+  ![img.png](https://img1.daumcdn.net/thumb/C163x110@2x.fwebp.q85/?fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FRRSJf%2FbtrFGzBltl1%2FAAAAAAAAAAAAAAAAAAAAAFIzCKaBISbmu-8ntUennPApvfrq6KItFMHJFPNw_5Mu%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1753973999%26allow_ip%3D%26allow_referer%3D%26signature%3DA9yHeoFnKRTjrkdCtMY0IS06Ebw%253D)
+  ```
+  (0,0)에서 시작. 좌측 상단
+  
+  moving = ['L', 'R', 'U', 'D']
+  dx = [0, 0, -1, 1]
+  dy = [-1, 1, 0, 0]
+  ```
 </details>
 
 <details>
