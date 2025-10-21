@@ -150,10 +150,28 @@ This is a auto push repository for Baekjoon Online Judge created with [BaekjoonH
   ```
   (0,0)에서 시작. 좌측 상단
   
-  moving = ['L', 'R', 'U', 'D']
+  move_type = ['L', 'R', 'U', 'D']
   dx = [0, 0, -1, 1]
   dy = [-1, 1, 0, 0]
+  
+  x,y =1,1
+  data = list(input().split())
+  
+  for i in data:
+      for t in range(len(move_type)):
+          if i == move_type[t]:
+              nx = x + dx[t] #초기화 안해도 파이썬은 가능
+              ny = y + dy[t]
+  
+      if nx <1 or ny < 1 or nx >n or ny>n:
+          continue
+  
+      x = nx
+      y = ny
   ```
+  - 알파벳 -> 숫자
+    - 대문자 `ord(문자) - ord('A') + 1`
+    - 소문자 `ord(문자) - ord('a') + 1`
 </details>
 
 <details>
