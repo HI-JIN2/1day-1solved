@@ -144,7 +144,74 @@ This is a auto push repository for Baekjoon Online Judge created with [BaekjoonH
   
   bfs(1)
   ```
+- 유기농배추
+  ```python
+  #dfs
+  import sys
+  sys.setrecursionlimit(10000)
+  from sys import stdin
+  input = stdin.readline
   
+  from collections import deque
+  
+  dx = [-1, 1, 0, 0]
+  dy = [0, 0, -1, 1]
+  
+  t = int(input())
+  for _ in range(t):
+      m, n, k = map(int, input().split())
+      graph = [[0 for _ in range(m)] for _ in range(n)]
+  
+      for _ in range(k):
+          a, b = map(int, input().split())
+          graph[b][a] = 1
+  
+      def dfs(x, y): #재귀
+          graph[y][x] = 0  # 시작점 방문 처리
+  
+          for i in range(4):
+              nx = x + dx[i]
+              ny = y + dy[i]
+  
+              if nx < 0 or nx >= m or ny < 0 or ny >= n:
+                  continue
+  
+              if graph[ny][nx] == 0:
+                  continue
+  
+              if graph[ny][nx] == 1:
+                  # graph[ny][nx] = 0  # 방문처리 안해도 됨
+                  dfs(nx,ny)
+  
+      def bfs(x,y):
+          queue = deque()
+          queue.append((x,y))
+          graph[y][x] = 0 #시작점 방문처리
+  
+          while queue:
+              x,y = queue.popleft()
+              for i in range(4):
+                  nx = x + dx[i]
+                  ny = y + dy[i]
+  
+                  if nx<0 or nx>=m or ny<0 or ny>=n:
+                      continue
+  
+                  if graph[ny][nx]:
+                      graph[ny][nx] = 0 #방문처리
+                      queue.append((nx,ny))
+  
+  
+  
+      answer = 0
+      for y in range(n):
+          for x in range(m):
+              if graph[y][x] == 1:
+                  # dfs(x, y)
+                  bfs(x,y)
+                  answer += 1
+      print(answer)
+  ```
 - 시뮬레이션
   ![img.png](https://img1.daumcdn.net/thumb/C163x110@2x.fwebp.q85/?fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FRRSJf%2FbtrFGzBltl1%2FAAAAAAAAAAAAAAAAAAAAAFIzCKaBISbmu-8ntUennPApvfrq6KItFMHJFPNw_5Mu%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1753973999%26allow_ip%3D%26allow_referer%3D%26signature%3DA9yHeoFnKRTjrkdCtMY0IS06Ebw%253D)
   ```
