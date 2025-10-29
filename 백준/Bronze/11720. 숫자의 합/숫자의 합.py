@@ -1,10 +1,8 @@
-N=int(input())
-a=input()
+n = int(input())
+s = input()
 
-total =0
+total = 0
+for i in s:
+    total += int(i)
 
-for i in a:
-    total = total+ int(i)
-
- 
 print(total)
