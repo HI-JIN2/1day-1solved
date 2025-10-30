@@ -241,6 +241,8 @@ This is a auto push repository for Baekjoon Online Judge created with [BaekjoonH
     - 소문자 `ord(문자) - ord('a') + 1`
   - f-string
     - `print(f'나는{name}입니다')` 이렇게 하면 name 자리에 name 변수 값이 들어감
+  - `.startswith()` 
+    - `numbers.startwith(target)` numbers가 target으로 시작하면
 </details>
 
 <details>
