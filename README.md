@@ -243,6 +243,18 @@ This is a auto push repository for Baekjoon Online Judge created with [BaekjoonH
     - `print(f'나는{name}입니다')` 이렇게 하면 name 자리에 name 변수 값이 들어감
   - `.startswith()` 
     - `numbers.startwith(target)` numbers가 target으로 시작하면
+  - 이중포문 O(N^2)-> 단일 포문 O(N)
+    - 이중포문
+      ```python
+         for i in range(len(numbers)-1):
+            for j in range(1, len(numbers)):
+                numbers[i], numbers[j]
+      ```
+    - 단일 포문
+      ```python
+         for i in range(len(numbers)-1):
+                numbers[i], numbers[i+1]
+      ```
 </details>
 
 <details>
