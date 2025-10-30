@@ -239,6 +239,8 @@ This is a auto push repository for Baekjoon Online Judge created with [BaekjoonH
   - 알파벳 -> 숫자
     - 대문자 `ord(문자) - ord('A') + 1`
     - 소문자 `ord(문자) - ord('a') + 1`
+  - f-string
+    - `print(f'나는{name}입니다')` 이렇게 하면 name 자리에 name 변수 값이 들어감
 </details>
 
 <details>
