@@ -261,4 +261,6 @@ This is a auto push repository for Baekjoon Online Judge created with [BaekjoonH
 <summary> SQL </summary>
   
 - `DATE_FORMAT(PUBLISHED_DATE,'%Y-%m-%d') as PUBLISHED_DATE`
+- concat(1,km) -> 1km  /  round(1.343333, 2) -> 1.34까지 표기  
+  - `concat(round(avg(D_BETWEEN_DIST),2),"km") as TOTAL_DISTANCE`
 </details>
