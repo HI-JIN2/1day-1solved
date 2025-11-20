@@ -239,10 +239,28 @@ This is a auto push repository for Baekjoon Online Judge created with [BaekjoonH
   - 알파벳 -> 숫자
     - 대문자 `ord(문자) - ord('A') + 1`
     - 소문자 `ord(문자) - ord('a') + 1`
+  - f-string
+    - `print(f'나는{name}입니다')` 이렇게 하면 name 자리에 name 변수 값이 들어감
+  - `.startswith()` 
+    - `numbers.startwith(target)` numbers가 target으로 시작하면
+  - 이중포문 O(N^2)-> 단일 포문 O(N)
+    - 이중포문
+      ```python
+         for i in range(len(numbers)-1):
+            for j in range(1, len(numbers)):
+                numbers[i], numbers[j]
+      ```
+    - 단일 포문
+      ```python
+         for i in range(len(numbers)-1):
+                numbers[i], numbers[i+1]
+      ```
 </details>
 
 <details>
 <summary> SQL </summary>
   
 - `DATE_FORMAT(PUBLISHED_DATE,'%Y-%m-%d') as PUBLISHED_DATE`
+- concat(1,km) -> 1km  /  round(1.343333, 2) -> 1.34까지 표기  
+  - `concat(round(avg(D_BETWEEN_DIST),2),"km") as TOTAL_DISTANCE`
 </details>

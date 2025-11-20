@@ -1,17 +1,19 @@
-arr = []
-arr_size = []
+data = [ ]
 
+for i in range(5):
+    data.append(list(input().strip()))
+# print(data)
 
-for _ in range(5):
-    j = input()
-    arr.append(j)
-    arr_size.append(len(j))
+longest = 0
+for i in data:
+    longest = max(longest, len(i))
+# print(longest)
 
-result=""
+answer = ''
 
-for i in range(max(arr_size)):
-    for j in range(5):
-        if i <arr_size[j]:
-            result+=arr[j][i]
+for j in range(longest):
+    for i in range(5):
+        if j<len(data[i]):
+            answer += data[i][j]
 
-print(result)
+print(answer)
