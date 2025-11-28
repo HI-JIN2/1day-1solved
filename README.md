@@ -1,7 +1,8 @@
 # 1일 1알고리즘
 This is a auto push repository for Baekjoon Online Judge created with [BaekjoonHub](https://github.com/BaekjoonHub/BaekjoonHub).
 
-# [문제 풀이 일지](https://hi-jin-1514.notion.site/2769b2ff4b1180018635f8c86d32c52d?v=2769b2ff4b1180e28d0c000cf0ed9e6b&source=copy_link)
+![Repo Activity Graph](https://github-readme-activity-graph.vercel.app/graph?username=HI-JIN2&repo=1day-1solved&theme=github)
+
 
 # 오답노트
 
