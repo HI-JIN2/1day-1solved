@@ -1,15 +1,21 @@
-from collections import deque
 
 def solution(cards1, cards2, goal):
-    cards1 = deque(cards1)
-    cards2 = deque(cards2)
+    l = []
+    answer = ""
     
-    for i in goal:
-        if len(cards1) != 0 and cards1[0] == i:
-            cards1.popleft()
-        elif len(cards2) != 0 and cards2[0] ==i:
-            cards2.popleft()
-        else:
-            return "No"
+    n = len(cards1)
+    m = len(cards2)
+    i = j = 0
     
-    return "Yes"
+    for word in goal:
+        if i<n and word ==cards1[i]:
+            l.append(word)
+            i+=1
+        if j<m and word == cards2[j]:
+            l.append(word)
+            j+=1
+    
+    if l == goal:
+        return "Yes"
+    else:
+        return "No"
