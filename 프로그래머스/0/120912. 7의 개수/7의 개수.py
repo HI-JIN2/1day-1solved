@@ -1,8 +1,9 @@
 def solution(array):
-    cnt=0 
-    for i in array:
-        for j in str(i):
-            if j == "7":
-                cnt+=1
-                
-    return cnt
+    answer = 0
+    
+    for n in array:
+        for i in str(n):
+            if '7' in i:
+                answer+=1
+    
+    return answer
