@@ -2,26 +2,21 @@ import math
 
 def solution(progresses, speeds):
     answer = []
+    days = [ math.ceil((100-progresses[i])/speeds[i]) for i in range(len(progresses))]
+    # print(days)
     
-    remain = [ math.ceil((100-progresses[i]) / speeds[i])  for i in range(len(progresses))]
-    print(remain)
-    
-    
-    nowdays = remain[0]
-    cnt = 1
-    
-    # print(remain[1:])
-    for i in remain[1:]:
-        # print(i,"입니다")
-        if i<=nowdays:
-            cnt +=1
-            # print(i,cnt)
-        else: # i >nowdays
-            answer.append(cnt)
-            nowdays = i
-            cnt =1
-            # print(i,cnt)
-    answer.append(cnt)
-    # print(answer)
-    
+    max_day = days[0]
+    feat_cnt=0
+    for d in days:
+        # print(d)
+        if max_day>=d:
+            # print(max_day,d)
+            feat_cnt+=1
+        else:
+            # print(max_day,d)
+            answer.append(feat_cnt) #이전거 
+            feat_cnt=1
+            max_day = d
+    answer.append(feat_cnt)
+
     return answer
