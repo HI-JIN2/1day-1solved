@@ -65,7 +65,7 @@ result = 99999 #가장 짧은 다리의 길이
 # print(island)
 
 for i in range(len(island)): #섬끼리의 거리를 비교 1번섬이랑 2번섬, 2번섬이랑 3번섬, 1번섬이랑 3번섬
-    for j in range(i+1, len(island)):
+    for j in range(i+1, len(island)):#이걸로 중복을 제거했더니 시간초과에서 성공으로 바뀜
         if i!=j:
             result = min( result, cal(i,j) -1 )
 
