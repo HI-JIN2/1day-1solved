@@ -1,4 +1,3 @@
-# 종료가 안되는 법칙???
 import sys
 
 input = sys.stdin.readline
@@ -20,18 +19,6 @@ for i,h in enumerate(horse):
     x,y,d = h
     board[x][y].append(i+1)
 
-
-# x,y
-d = [
-    [0,0],
-    [1,0], # ->
-    [-1,0], #<-
-    [0,-1], #위로
-    [0,1] #아래로
-]
-
-
-
 def move_white(nx,ny, moving):
     board[nx][ny].extend(moving)
     for num in moving:
@@ -50,7 +37,8 @@ def move_red(nx, ny, moving ):
 def blue_or_out(nx, ny):
     return not (0 <= nx < n and 0 <= ny < n) or pan[ny][nx] == 2
 
-for turn in range(1,1001): #반복문을 뭘로 해야할지
+
+for turn in range(1,1001): #1000회 넘도록 안되면 fail 처리
     for i,h in enumerate(horse):
 
         x,y = h[0],h[1] #말 현재 위치
