@@ -1,22 +1,15 @@
-import sys
-
-str = sys.stdin.readline().strip()
-
-is_laser = True
-current_bar = 0
-total = 0
+data = input()
 stack = []
+answer = 0
 
-for v in str:
-    if v == '(':
-        stack.append(v)
-        current_bar += 1
-        is_laser = True
-    else:
-        current_bar -= 1
-        if is_laser:
-            total += current_bar
-            is_laser = False
-        else:
-            total += 1
-print(total)
+for i in range(len(data)):
+    if data[i] == '(':
+        stack.append('(')
+    else:  # ')'
+        stack.pop()
+        if data[i-1] == '(':   # 바로 앞이 '('면 레이저
+            answer += len(stack)
+        else:                  # 쇠막대기 끝
+            answer += 1
+
+print(answer)
