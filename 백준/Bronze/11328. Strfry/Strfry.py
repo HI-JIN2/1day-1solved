@@ -8,7 +8,8 @@ for _ in range(n):
     b_list = list(b)
 
     possible = True
-    
+
+    #a랑 b랑 길이가 다른 테케가 있을거라고 상상도 못함
     if len(a_list) != len(b_list):
         possible = False
 
