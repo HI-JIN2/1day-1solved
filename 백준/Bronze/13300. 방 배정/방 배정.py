@@ -15,9 +15,9 @@ for i in range(n):
 # print(data,fdata)
 
 for d in fdata:
-    answer += math.ceil(d/2)
+    answer += math.ceil(d/k)
 
 for d in data:
-    answer += math.ceil(d/2)
+    answer += math.ceil(d/k)
 
 print(answer)
