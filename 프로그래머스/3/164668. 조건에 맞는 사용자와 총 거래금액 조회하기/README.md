@@ -12,11 +12,11 @@
 
 ### 채점결과
 
-Empty
+합계: 100.0 / 100.0
 
 ### 제출 일자
 
-2024년 02월 27일 16:47:50
+2026년 04월 06일 14:42:22
 
 ### 문제 설명
 
@@ -84,7 +84,7 @@ Empty
 <td>FALSE</td>
 </tr>
 <tr>
-<td>NICKANME</td>
+<td>NICKNAME</td>
 <td>VARCHAR(100)</td>
 <td>FALSE</td>
 </tr>
