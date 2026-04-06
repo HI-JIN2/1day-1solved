@@ -1,23 +1,24 @@
 from collections import deque
+
 def solution(priorities, location):
-    answer = []
-    
-    queue = deque()
+    answer = 0
+    result = []
+    q = deque()
     for i, p in enumerate(priorities):
-        queue.append((i,p))
-    # print(queue)
-    
-    while queue:
-        i,p = queue.popleft()
-        if len(queue) ==0 :
-            answer.append(i) #마지막 원소
-            break
-        if p < max(q[1] for q in queue):
-            # print(i,p)
-            queue.append((i,p))
-        else: #max라면
-            answer.append(i)
+        # print(i,p)
+        q.append((i,p))
         
-    # print(answer)
+    # print(max(q, key=lambda x: x[1]))
+    while q:
+        max_p = max(q, key=lambda x: x[1])[1]
+        i, p = q.popleft()
+        
+        if p == max_p:
+            #그대로 팝
+            result.append(i)
+        else:
+            q.append((i,p)) #다시 넣어
+    # print(result)
     
-    return answer.index(location)+1
+        
+    return result.index(location)+1
