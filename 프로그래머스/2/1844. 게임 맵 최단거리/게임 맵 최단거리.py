@@ -1,48 +1,39 @@
 from collections import deque
 
+
 def solution(maps):
-    answer = 0
-    
-    m = len(maps[0])
     n = len(maps)
+    m = len(maps[0])
     
-    #동서남북
-    dx = [1,-1,0,0]
-    dy = [0,0,1,-1]
+    dist = [ [-1]*m for _ in range(n)]
+
+    def bfs(r,c):
+        #출발지인 0,0에서 부터 닿을 수 있는 모든 지점까지의 거리를 구할 것임
+        q = deque()
+        q.append((r,c))
+        dist[r][c] = 0 #출발지에서 출발지까지의 거리는 0 
+
+        while q:
+            r,c = q.popleft()
+
+            for dr,dc in ((1,0), (-1,0), (0,1),(0,-1)):
+                nr = dr+r
+                nc = dc+c
+
+                if 0>nr or nr>=n or 0>nc or nc>=m:
+                    continue #범위 아웃
+
+                elif dist[nr][nc] == -1 and maps[nr][nc] == 1: #안가야하고 갈 수 있는 곳만
+                    q.append((nr,nc))
+                    dist[nr][nc] = dist[r][c] +1 #bfs는 큐에 넣고 선 처리
+                    # print(nr,nc,dist[nr][nc])
+
+    bfs(0,0) #출발지가 하나이기 때문에 bfs를 한번만 호출
+  
+    # print(dist)
+
     
-    is_right = 0 
-    
-
-    queue = deque()
-    queue.append((0,0))
-
-    while queue:
-        y,x = queue.popleft()
-        # print("현재위치",x,y)
-        # maps[y][x] = 0 #방문처리
-
-        for i in range(4):
-            # print(i)
-            nx = x+ dx[i]
-            ny = y+dy[i]
-
-            if nx<0 or nx>=m or ny<0 or ny>=n:
-                continue
-
-            if maps[ny][nx] ==0: #못가
-                continue
-
-            if maps[ny][nx] == 1:
-                # print("갈거야",nx,ny)
-                # print(maps[ny][nx],maps[y][x])
-            
-                maps[ny][nx] = maps[y][x]+1
-                queue.append((ny,nx))
-                
-    
-    # print(maps)
-    
-    if maps[n-1][m-1] == 1:
+    if dist[n-1][m-1] == -1:
         return -1
-    
-    return maps[n-1][m-1]
+    else: 
+        return dist[n-1][m-1]+1
