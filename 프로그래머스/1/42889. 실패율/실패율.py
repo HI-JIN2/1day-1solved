@@ -1,24 +1,20 @@
-def solution(N, stages):
-    num = []
-    per =[ ]
+def solution(N, stages):    
+    # 실패율 = 스테이지에 도달했으나 아직 클리어 못한 수 / 스테이지에 도달한 플레이어수
+    result = []
+    player_cnt = len(stages) #분모
+    for n in range(N):
+        p = stages.count(n+1)
+        if p == 0:
+            result. append(((n+1),0))
+        elif player_cnt>0:
+            result.append((n+1,(p / player_cnt)))
+            player_cnt -= p
+    # print(result)    
+    result = sorted(result, key=lambda x: ((-x[1], x[0])))
     
-    for i in range(1,N+1):
-        num.append(stages.count(i))    
-    
-    t = len(stages)
-    cnt =0
-    for i in num:
-        if i ==0 :
-            per.append(i)
-        else:
-            per.append(i/(t-cnt))
-        cnt +=i
+    answer=[]
+    for i in result:
+        answer.append(i[0])
+    # print(result)        
 
-
-    sorted_indexed_list = sorted(enumerate(per), key=lambda x: x[1], reverse=True)
-
-    # 정렬된 결과에서 인덱스만 추출
-    sorted_indices = [index+1 for index, value in sorted_indexed_list]
-    # print(sorted_indices)
-
-    return sorted_indices
+    return answer
