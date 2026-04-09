@@ -263,8 +263,9 @@ This is a auto push repository for Baekjoon Online Judge created with [BaekjoonH
   
 - `DATE_FORMAT(PUBLISHED_DATE,'%Y-%m-%d') as PUBLISHED_DATE`
 - 2022-03 `where DATE_FORMAT(SALES_DATE,"%Y-%m") = "2022-03"`
-- concat(1,km) -> 1km  /  round(1.343333, 2) -> 1.34까지 표기  
-  - `concat(round(avg(D_BETWEEN_DIST),2),"km") as TOTAL_DISTANCE`
+- `concat(round(avg(D_BETWEEN_DIST),2),"km") as TOTAL_DISTANCE`
+  - concat(1,km) -> 1km
+  - round(1.343333, 2) -> 1.34까지 표기  
 - 다른 두 테이블을 합칠때 `UNION`이나 `UNION ALL`
 - SELECT 문에서 NULL을 의도적으로 추가할때, `SELECT PRODUCT_ID, NULL as USER_ID`
 </details>
