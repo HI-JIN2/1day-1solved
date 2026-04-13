@@ -89,7 +89,6 @@ This is a auto push repository for Baekjoon Online Judge created with [BaekjoonH
   ```
 - list(map(int,input().split())
 
-- set(list(a))
 - s.split() 
   ```python 
   s = '10 20 Z 30'
@@ -112,7 +111,18 @@ This is a auto push repository for Baekjoon Online Judge created with [BaekjoonH
   count = Count(fruits)
   count.most_common()
   ```
-  
+### set
+- set(list(a))
+## heapq
+```
+import heapq
+
+nums = [1,3,5,7,9,2,4,6,8,0]
+heapq.heapify(nums) #최소힙 
+```
+- 하나하나 추가 heapq.heappush(heap, num)
+- 우선순위큐를 heapq로 구현할 수 있음
+  -  
 ### deque
 - popleft() = pop(0)
 - ![img.png](https://velog.velcdn.com/images/snghyun331/post/ea7102a9-a733-4077-a695-89e8daa194e3/image.png)
