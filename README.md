@@ -99,6 +99,9 @@ This is a auto push repository for Baekjoon Online Judge created with [BaekjoonH
 입력값에 대한 결과값이 유일하다
 
 - dict()
+  ```
+  result = dict(db).get(id_pw[0]) # 이렇게 하면 이 값 자체가 있는지 없는지, 값이 맞는지 조건문으로 확인 가능
+  ```
 - defaultdict()은 없는 키도 자동으로 기본값 넣어줌 (기본값 int는 0)
   ```
   count = defaultdict(int)
