@@ -75,6 +75,13 @@ This is a auto push repository for Baekjoon Online Judge created with [BaekjoonH
   arr = [[n for n in range(m+1)] for m in range(3)]
   # [[0],[0,1],[0,1,2]]
   ```
+- 컴프리헨션으로 기존에 있는 배열 자르기
+  ```python
+  [num_list[i:i+n] for i in range(0,len(num_list),n)]
+  
+  #input [1, 2, 3, 4, 5, 6, 7, 8], 2
+  #output [[1, 2], [3, 4], [5, 6], [7, 8]]
+  ```
 - 딕셔너리 컴프리헨션
   ```python
   students = ["james", "cameron", "mellon", "indo"]
