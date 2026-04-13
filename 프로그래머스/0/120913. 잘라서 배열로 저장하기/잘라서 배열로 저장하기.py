@@ -1,10 +1,4 @@
 def solution(my_str, n):
     answer = []
-    
-    for i in range(len(my_str)//n+1):
-        ans = my_str[i*n:i*n+n]
-        if ans:  
-            answer.append(ans)
         
-        
-    return answer
+    return [my_str[i:i+n] for i in range(0, len(my_str), n)]
