@@ -6,58 +6,13 @@ This is a auto push repository for Baekjoon Online Judge created with [BaekjoonH
 
 # 오답노트
 
-<details>
-<summary> 파이썬 </summary>
-  
+## 파이썬
+### 입출력
 - 입력 빠르게 받기
   ```python
   import sys
   input = sys.stdin.readline()
   ```
-- sort
-- ![img_1.png](https://wikidocs.net/images/page/232020/03-1-12.png)
-
-  - l.sort()는 원본 자체를 정렬
-  - l2 = l.sorted()는 원본 그대로 두고 정렬
-  - 버블정렬은 N^2 / sort는 nlogn
-  - set은 n
-
-- `enumerate()`
-  - 리스트 안에 있는걸 인덱스랑 같이 반환할 수 있음 
-  - `for i, num in enumerate(nums):`
-- for i, j in zip(survey, choices):
-  - 두 리스트를 한번에 돌림
-
-- list(map(int,input().split())
-
-- set(list(a))
-- s.split() 
-  ```python 
-  s = '10 20 Z 30'
-  s = s.split() # s = ['10', '20', 'Z', '30']
-  ```
-- popleft() = pop(0)
-- ![img.png](https://velog.velcdn.com/images/snghyun331/post/ea7102a9-a733-4077-a695-89e8daa194e3/image.png)
-  ```python
-  from collections import deque
-  a = deque()
-  [a.append(i) for i in range(5)]
-  a.pop() #deque([0, 1, 2, 3])
-
-  
-  b = deque()
-  [b.append(i) for i in range(5)]
-  b.popleft() #deque([1, 2, 3, 4])
-  ```
-- 배열에 있는 값이 큰순서대로 인덱스 출력하기
-  ```python
-  sorted_indexed_list = sorted(enumerate(per), key=lambda x: x[1], reverse=True)
-
-  # 정렬된 결과에서 인덱스만 추출
-  sorted_indices = [index + 1 for index, value in sorted_indexed_list]
-  ```
-
-- dequeue 스택과 큐의 기능을 한 번에
 - 로또 파싱하기 
   - `replace("(","").replace(")","")` 가 핵심
   ```python
@@ -76,6 +31,75 @@ This is a auto push repository for Baekjoon Online Judge created with [BaekjoonH
   
   print(lotto_numbers)
   ```
+  
+### 정렬 sort
+- ![img_1.png](https://wikidocs.net/images/page/232020/03-1-12.png)
+
+  - l.sort()는 원본 자체를 정렬
+  - l2 = sorted(l)는 원본 그대로 두고 정렬 sorted(arr,reverse=True,lambda x: (x[0], -x[1)))
+  - 버블정렬은 N^2 / sort는 nlogn
+  - set은 n
+ 
+- 배열에 있는 값이 큰순서대로 인덱스 출력하기
+  ```python
+  sorted_indexed_list = sorted(enumerate(per), key=lambda x: x[1], reverse=True)
+
+  # 정렬된 결과에서 인덱스만 추출
+  sorted_indices = [index + 1 for index, value in sorted_indexed_list]
+  ```
+
+
+### 리스트
+- `enumerate()`
+  - 리스트 안에 있는걸 인덱스랑 같이 반환할 수 있음 
+  - `for i, num in enumerate(nums):`
+- for i, j in zip(survey, choices):
+  - 두 리스트를 한번에 돌림
+- 컴프리헨션 comprehension
+  - arr = [i*2 for i in range(10)]
+  - arr = [n for n in range(10) if n%2==0]
+  - [ (변수를 활용한 계산식) for (변수) in (iterable) ]
+- 다중 nested로 활용
+  ```python
+  matrix = [[1,2,3] [4,5],[6,7,8,9]]
+  flatten_matrix = [val for sublist in matrix for val in sublist]
+  # [1,2,3,4,5,6,7,8]
+  ```
+  ```python
+  arr = [[n for n in range(m+1)] for m in range(3)]
+  # [[0],[0,1],[0,1,2]]
+  ```
+- 딕셔너리 컴프리헨션
+  ```python
+  students = ["james", "cameron", "mellon", "indo"]
+  class_info = {idx: student for idx, student in enumerate(students)}
+  ```
+- list(map(int,input().split())
+
+- set(list(a))
+- s.split() 
+  ```python 
+  s = '10 20 Z 30'
+  s = s.split() # s = ['10', '20', 'Z', '30']
+  ```
+  
+### deque
+- popleft() = pop(0)
+- ![img.png](https://velog.velcdn.com/images/snghyun331/post/ea7102a9-a733-4077-a695-89e8daa194e3/image.png)
+  ```python
+  from collections import deque
+  a = deque()
+  [a.append(i) for i in range(5)]
+  a.pop() #deque([0, 1, 2, 3])
+
+  
+  b = deque()
+  [b.append(i) for i in range(5)]
+  b.popleft() #deque([1, 2, 3, 4])
+  ```
+
+- dequeue 스택과 큐의 기능을 한 번에
+
 
 - str() int() 타입 변환 확실하게
 - 딕셔너리
@@ -95,7 +119,7 @@ This is a auto push repository for Baekjoon Online Judge created with [BaekjoonH
         dp[i] = dp[i-1]+dp[i-2]
   ```
 - sep="", end=""
-- DFS 깊이우선탐색-재귀
+### DFS 깊이우선탐색-재귀
   ```python
   graph = {
       1: [4,5],
@@ -117,7 +141,7 @@ This is a auto push repository for Baekjoon Online Judge created with [BaekjoonH
   
   dfs(1)
   ```
-- BFS 너비우선탐색-큐
+### BFS 너비우선탐색-큐
   ```python
   from collections import deque
   
@@ -213,7 +237,7 @@ This is a auto push repository for Baekjoon Online Judge created with [BaekjoonH
                   answer += 1
       print(answer)
   ```
-- 시뮬레이션
+### 시뮬레이션
   ![img.png](https://img1.daumcdn.net/thumb/C163x110@2x.fwebp.q85/?fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FRRSJf%2FbtrFGzBltl1%2FAAAAAAAAAAAAAAAAAAAAAFIzCKaBISbmu-8ntUennPApvfrq6KItFMHJFPNw_5Mu%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1753973999%26allow_ip%3D%26allow_referer%3D%26signature%3DA9yHeoFnKRTjrkdCtMY0IS06Ebw%253D)
   ```
   (0,0)에서 시작. 좌측 상단
@@ -256,11 +280,7 @@ This is a auto push repository for Baekjoon Online Judge created with [BaekjoonH
          for i in range(len(numbers)-1):
                 numbers[i], numbers[i+1]
       ```
-</details>
-
-<details>
-<summary> SQL </summary>
-  
+## SQL 
 - `DATE_FORMAT(PUBLISHED_DATE,'%Y-%m-%d') as PUBLISHED_DATE`
 - 2022-03 `where DATE_FORMAT(SALES_DATE,"%Y-%m") = "2022-03"`
 - `concat(round(avg(D_BETWEEN_DIST),2),"km") as TOTAL_DISTANCE`
