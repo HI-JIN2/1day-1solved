@@ -95,6 +95,20 @@ This is a auto push repository for Baekjoon Online Judge created with [BaekjoonH
   s = '10 20 Z 30'
   s = s.split() # s = ['10', '20', 'Z', '30']
   ```
+### 해시 딕셔너리
+입력값에 대한 결과값이 유일하다
+
+- dict()
+- defaultdict()은 없는 키도 자동으로 기본값 넣어줌 (기본값 int는 0)
+  ```
+  count = defaultdict(int)
+  frequency = sorted(count.items(), key= lambda x: -x[1])
+  ```
+- Counter() 딕셔너리와 유사, 원소별로 등장회수 쉽게 셀 수 있음
+  ```
+  count = Count(fruits)
+  count.most_common()
+  ```
   
 ### deque
 - popleft() = pop(0)
