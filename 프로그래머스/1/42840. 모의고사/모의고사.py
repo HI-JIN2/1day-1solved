@@ -1,5 +1,5 @@
 def solution(answers):
-    result = []
+    answer = []
     
     patterns = [
     [1,2,3,4,5],
@@ -7,17 +7,18 @@ def solution(answers):
     [3,3,1,1,2,2,4,4,5,5]]
     
     score = [0]*3
-    for i, answer in enumerate(answers):
-        for j,pattern in enumerate(patterns):
-            if answer == pattern[i % len(pattern)]:
-                score[j] +=1
-            
-        
-    m = max(score)
 
-    for i,score in enumerate(score):
-        if score== m:
-            result.append(i+1)
+    for i,a in enumerate(answers):
+        for j in range(3):
+            if a == patterns[j][i%len(patterns[j])]:
+                score[j] +=1
     
-    return result
+    # print(score)
+    max_score = max(score)
+    for i, s in enumerate(score):
+        if max_score == s:
+            answer.append(i+1)
+            
+
+    return answer
 
