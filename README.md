@@ -59,7 +59,13 @@ This is a auto push repository for Baekjoon Online Judge created with [BaekjoonH
   - arr = [i*2 for i in range(10)]
   - arr = [n for n in range(10) if n%2==0]
   - [ (변수를 활용한 계산식) for (변수) in (iterable) ]
-- 다중 nested로 활용
+  - ```python
+    def solution(my_str, n):
+    answer = []
+        
+    return [my_str[i:i+n] for i in range(0, len(my_str), n)]
+    ```
+- 컴프리헨션을 다중 nested로 활용
   ```python
   matrix = [[1,2,3] [4,5],[6,7,8,9]]
   flatten_matrix = [val for sublist in matrix for val in sublist]
