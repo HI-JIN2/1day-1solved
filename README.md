@@ -32,14 +32,12 @@ This is a auto push repository for Baekjoon Online Judge created with [BaekjoonH
   print(lotto_numbers)
   ```
   
-### 정렬 sort
-- ![img_1.png](https://wikidocs.net/images/page/232020/03-1-12.png)
-
-  - l.sort()는 원본 자체를 정렬
-  - l2 = sorted(l)는 원본 그대로 두고 정렬 sorted(arr,reverse=True,lambda x: (x[0], -x[1)))
-  - 버블정렬은 N^2 / sort는 nlogn
-  - set은 n
- 
+### 정렬 sorted()
+- l.sort()는 원본 자체를 정렬 -> 속도 느림
+- l2 = sorted(l)는 새로운 정렬된 **리스트**를 반환 (리스트, 튜플, 딕셔너리, 셋, 문자열 -> 리스트)
+- `sorted(arr, reverse=True, key=lambda x: (x[0], -x[1)))`
+- `sorted(arr, reverse=True, key=len)`
+- 버블정렬은 N^2 / sorted()는 nlogn
 - 배열에 있는 값이 큰순서대로 인덱스 출력하기
   ```python
   sorted_indexed_list = sorted(enumerate(per), key=lambda x: x[1], reverse=True)
