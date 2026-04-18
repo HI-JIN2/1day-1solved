@@ -325,6 +325,9 @@ This is a auto push repository for Baekjoon Online Judge created with [BaekjoonH
          for i in range(len(numbers)-1):
                 numbers[i], numbers[i+1]
       ```
+### DP 
+- 복잡한 문제를 더 작은 하위 문제로 나누고 하위 문제에 댛나 해를 저장해 중복 계산을 피함으로써 문제를 최적화해서 해결
+- 
 ## SQL 
 - `DATE_FORMAT(PUBLISHED_DATE,'%Y-%m-%d') as PUBLISHED_DATE`
 - 2022-03 `where DATE_FORMAT(SALES_DATE,"%Y-%m") = "2022-03"`
