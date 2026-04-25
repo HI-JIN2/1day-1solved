@@ -13,6 +13,8 @@ This is a auto push repository for Baekjoon Online Judge created with [BaekjoonH
   import sys
   input = sys.stdin.readline()
   ```
+- 띄어쓰기로 구분된 숫자 리스트를 리스트로 받기
+  `nlist = list(map(int,input().split()))`
 - 로또 파싱하기 
   - `replace("(","").replace(")","")` 가 핵심
   ```python
