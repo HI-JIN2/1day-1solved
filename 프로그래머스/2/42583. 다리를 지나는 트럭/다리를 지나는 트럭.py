@@ -7,21 +7,19 @@ def solution(bridge_length, weight, truck_weights):
     bridge = deque([0] * bridge_length)
     trucks = deque(truck_weights)
     
-    while trucks or now_weight > 0:
+    while trucks or now_weight > 0: #가야하는 차가 남았거나 다리 위의 차가 남은 동안
         out = bridge.popleft()
         now_weight -= out
 
         if trucks:
             now = trucks.popleft()
 
-            if now_weight + now <= weight:
+            if now_weight + now <= weight: 
                 bridge.append(now)
-                now_weight += now
+                now_weight += now 
             else:
-                bridge.append(0)
-                trucks.appendleft(now)
-        # else:
-        #     bridge.append(0)
-           
-        answer+=1
+                bridge.append(0) #차 대신 0 추가
+                trucks.appendleft(now) #아까 뽑은거 다시 대기열에 추가
+ 
+        answer+=1 #1초씩 증가
     return answer
