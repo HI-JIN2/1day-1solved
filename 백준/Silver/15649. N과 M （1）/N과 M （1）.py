@@ -1,21 +1,21 @@
-#n과 m 1
-#백트래킹
+n, m = map(int, input().split())
 
-
-n,m= map(int,input().split())
-
-s = [] #수열
+s = []
+visited = [False] * (n + 1)
 
 def fun():
     if len(s) == m:
-        print(*s, sep=' ')
+        print(*s)
         return
 
-    else:
-        for i in range(1,n+1):
-            if i not in s:
-                s.append(i)
-                fun()
-                s.pop()
+    for i in range(1, n + 1):
+        if not visited[i]:
+            visited[i] = True
+            s.append(i)
+
+            fun()
+
+            s.pop()
+            visited[i] = False
 
 fun()
