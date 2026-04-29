@@ -1,23 +1,22 @@
+from itertools import permutations
+
 def solution(k, dungeons):
-    answer = 0
-    visited = [False] * len(dungeons)
+    answer = -1
+    
+    result = [] #탐험 횟수를 기록
+    
+    # 던전의 순열 (순서가 있는 나열)
+    for p in permutations(dungeons):
+        # print(p)
+        cost = k
+        cnt = 0 
+        for i in p:
+            if cost>=i[0]: #현재 피로도가 최소 피로도 이상이어야 갈 수 있음
+                cost-=i[1] #가면 소모피로도가 깎임
+                cnt+=1 #방문 던전 하나 적립
+        result.append(cnt) 
+                
+                
 
-    def dfs(current_k, count):
-        nonlocal answer
-
-        answer = max(answer, count)
-
-        for i in range(len(dungeons)):
-            need, cost = dungeons[i]
-
-            # 아직 안 갔고, 현재 피로도가 최소 필요 피로도 이상이면 갈 수 있음
-            if not visited[i] and current_k >= need:
-                visited[i] = True
-
-                dfs(current_k - cost, count + 1)
-
-                visited[i] = False
-
-    dfs(k, 0)
-
-    return answer
+    
+    return max(result)
