@@ -356,6 +356,16 @@ def get_divisors(n):
 
     return sorted(result)
 ```
+
+### 순열과 조합
+- from itertools import permutatios 순열. 순서가 있는 조합  
+  `for p in permutations(dungeons):`
+- from itertools import product 중복순열  
+  `for i in product(arr, repeat = 5): `
+- from itertools import combinations 조합  
+  `for i in combinations:`
+- from itertools import combinations_with_replacement 중복 조합  
+  `for c in combinations_with_replacement(arr, 2):` 
 ## SQL 
 - `DATE_FORMAT(PUBLISHED_DATE,'%Y-%m-%d') as PUBLISHED_DATE`
 - 2022-03 `where DATE_FORMAT(SALES_DATE,"%Y-%m") = "2022-03"`
