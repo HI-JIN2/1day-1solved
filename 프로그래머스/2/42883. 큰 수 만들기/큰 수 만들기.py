@@ -2,27 +2,13 @@ def solution(number, k):
     stack = []
 
     for n in number:
-        # 앞에 숫자가 있고
-        # 아직 지울 수 있고
-        # 앞 숫자가 지금 숫자보다 작으면
-        while True:
-            if not stack:
-                break
-
-            if k <= 0:
-                break
-
-            if stack[-1] >= n:
-                break
-
+        while stack and k > 0 and stack[-1] < n: #현재값이 마지막값 보다 클때 막값 지워. 큰값인 내가 더 앞으로가야 유리하기 때문
             stack.pop()
             k -= 1
 
         stack.append(n)
 
-    # 아직 덜 지웠으면 뒤에서 제거
-    while k > 0:
-        stack.pop()
-        k -= 1
+    if k > 0:
+        stack = stack[:-k]
 
     return ''.join(stack)
