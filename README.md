@@ -31,7 +31,9 @@ This is a auto push repository for Baekjoon Online Judge created with [BaekjoonH
   
   print(lotto_numbers)
   ```
-  
+- f-string  
+  `print(f'나는{name}입니다')` 이렇게 하면 name 자리에 name 변수 값이 들어감
+
 ### 정렬 sorted()
 - l.sort()는 원본 자체를 정렬 -> 속도 느림
 - l2 = sorted(l)는 새로운 정렬된 **리스트**를 반환 (리스트, 튜플, 딕셔너리, 셋, 문자열 -> 리스트)
@@ -306,12 +308,11 @@ This is a auto push repository for Baekjoon Online Judge created with [BaekjoonH
       x = nx
       y = ny
   ```
-  - 알파벳 -> 숫자
+### 알파벳 -> 숫자
     - 대문자 `ord(문자) - ord('A') + 1`
     - 소문자 `ord(문자) - ord('a') + 1`
-  - f-string
-    - `print(f'나는{name}입니다')` 이렇게 하면 name 자리에 name 변수 값이 들어감
-  - `.startswith()` 
+### 문자열
+- `.startswith()` 
     - `numbers.startwith(target)` numbers가 target으로 시작하면
   - 이중포문 O(N^2)-> 단일 포문 O(N)
     - 이중포문
