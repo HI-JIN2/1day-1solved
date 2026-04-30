@@ -1,14 +1,19 @@
 def solution(number, k):
+    answer = ''
     stack = []
-
+    
+    d = k
     for n in number:
-        while stack and k > 0 and stack[-1] < n: #현재값이 마지막값 보다 클때 막값 지워. 큰값인 내가 더 앞으로가야 유리하기 때문
+    
+        while stack and stack[-1]<n and d>0:
             stack.pop()
-            k -= 1
-
+            d-=1  #이 문제의 그리디함은 여기서 나온다. 앞부터 뺄 수 있는 거 빼
+        
         stack.append(n)
+        # print(stack, d)
 
-    if k > 0:
-        stack = stack[:-k]
-
-    return ''.join(stack)
+    if d>0:
+        stack=stack[:-d]
+            
+        
+    return "".join(stack)
