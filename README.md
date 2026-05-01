@@ -365,7 +365,15 @@ def get_divisors(n):
 - from itertools import combinations 조합  
   `for i in combinations:`
 - from itertools import combinations_with_replacement 중복 조합  
-  `for c in combinations_with_replacement(arr, 2):` 
+  `for c in combinations_with_replacement(arr, 2):`
+
+### 진수 변환
+
+- b = bin(value) #2진수
+- o = oct(value) #8진수
+- h = hex(value) #16진수
+
+
 ## SQL 
 - `DATE_FORMAT(PUBLISHED_DATE,'%Y-%m-%d') as PUBLISHED_DATE`
 - 2022-03 `where DATE_FORMAT(SALES_DATE,"%Y-%m") = "2022-03"`
